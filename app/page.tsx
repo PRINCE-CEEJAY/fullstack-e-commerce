@@ -1,9 +1,14 @@
-import ReduxProvider from "../providers/ReduxProvider"
+'use client';
+import { Button } from '@/components/ui/button';
+import { useGetProductsQuery } from '@/services/fakestoreapi';
 
-export default function Home(){
-  return(
-    <ReduxProvider>
+export default function Home() {
+  const { data: products } = useGetProductsQuery();
+  console.log(products);
+  return (
+    <div className='flex flex-col justify-center items-center'>
       <h1>Home page </h1>
-    </ReduxProvider>
-  )
+      <Button>Add To Cart</Button>
+    </div>
+  );
 }

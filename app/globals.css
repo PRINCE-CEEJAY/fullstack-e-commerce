@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -49,72 +49,100 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Jumia Brand Colors */
+  /* Primary: #F68B1F (Tree Poppy) -> oklch(77.5% 0.14 56.8) */
+  --background: oklch(98% 0 0); /* Very light gray/white page bg */
+  --foreground: oklch(20% 0 0); /* Dark text */
+
+  --card: oklch(100% 0 0); /* White cards */
+  --card-foreground: oklch(20% 0 0);
+
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(20% 0 0);
+
+  /* JUMIA ORANGE */
+  --primary: oklch(77.5% 0.14 56.8);
+  --primary-foreground: oklch(100% 0 0); /* White text on orange buttons */
+
+  --secondary: oklch(95% 0 0); /* Light gray for secondary elements */
+  --secondary-foreground: oklch(20% 0 0);
+
+  --muted: oklch(95% 0 0);
+  --muted-foreground: oklch(55% 0 0); /* Gray text for descriptions */
+
+  --accent: oklch(95% 0 0); /* Hover states often light gray */
+  --accent-foreground: oklch(20% 0 0);
+
+  --destructive: oklch(65% 0.2 25); /* Red for errors/delete */
+
+  --border: oklch(90% 0 0); /* Light gray borders */
+  --input: oklch(90% 0 0);
+  --ring: oklch(77.5% 0.14 56.8); /* Orange focus ring */
+
+  /* Charts (Optional - keeping neutral or adapting) */
+  --chart-1: oklch(77.5% 0.14 56.8); /* Orange */
+  --chart-2: oklch(60% 0.1 200); /* Blue */
+  --chart-3: oklch(70% 0.15 140); /* Green */
+  --chart-4: oklch(65% 0.1 300); /* Purple */
+  --chart-5: oklch(50% 0.1 50); /* Amber */
+
+  --radius: 0.5rem; /* Jumia uses slightly sharper corners than default shadcn */
+
+  /* Sidebar (if used, usually white or light gray in e-commerce) */
+  --sidebar: oklch(100% 0 0);
+  --sidebar-foreground: oklch(20% 0 0);
+  --sidebar-primary: oklch(77.5% 0.14 56.8);
+  --sidebar-primary-foreground: oklch(100% 0 0);
+  --sidebar-accent: oklch(95% 0 0);
+  --sidebar-accent-foreground: oklch(20% 0 0);
+  --sidebar-border: oklch(90% 0 0);
+  --sidebar-ring: oklch(77.5% 0.14 56.8);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Jumia doesn't have a prominent official dark mode, 
+     but this provides a high-contrast e-commerce dark theme */
+  --background: oklch(15% 0 0);
+  --foreground: oklch(95% 0 0);
+
+  --card: oklch(20% 0 0);
+  --card-foreground: oklch(95% 0 0);
+
+  --popover: oklch(20% 0 0);
+  --popover-foreground: oklch(95% 0 0);
+
+  --primary: oklch(77.5% 0.14 56.8); /* Keep brand orange */
+  --primary-foreground: oklch(20% 0 0); /* Dark text on orange for contrast */
+
+  --secondary: oklch(25% 0 0);
+  --secondary-foreground: oklch(95% 0 0);
+
+  --muted: oklch(25% 0 0);
+  --muted-foreground: oklch(70% 0 0);
+
+  --accent: oklch(25% 0 0);
+  --accent-foreground: oklch(95% 0 0);
+
+  --destructive: oklch(65% 0.2 25);
+
+  --border: oklch(30% 0 0);
+  --input: oklch(30% 0 0);
+  --ring: oklch(77.5% 0.14 56.8);
+
+  --chart-1: oklch(77.5% 0.14 56.8);
+  --chart-2: oklch(60% 0.1 200);
+  --chart-3: oklch(70% 0.15 140);
+  --chart-4: oklch(65% 0.1 300);
+  --chart-5: oklch(50% 0.1 50);
+
+  --sidebar: oklch(20% 0 0);
+  --sidebar-foreground: oklch(95% 0 0);
+  --sidebar-primary: oklch(77.5% 0.14 56.8);
+  --sidebar-primary-foreground: oklch(20% 0 0);
+  --sidebar-accent: oklch(25% 0 0);
+  --sidebar-accent-foreground: oklch(95% 0 0);
+  --sidebar-border: oklch(30% 0 0);
+  --sidebar-ring: oklch(77.5% 0.14 56.8);
 }
 
 @layer base {
@@ -123,6 +151,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Optional: Add Jumia's likely font stack if not using Inter */
+    /* font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; */
   }
   html {
     @apply font-sans;
