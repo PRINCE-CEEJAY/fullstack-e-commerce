@@ -158,3 +158,9 @@
     @apply font-sans;
   }
 }
+
+@layer components {
+  .container {
+    @apply flex flex-col justify-center items-center min-h-screen;
+  }
+}
